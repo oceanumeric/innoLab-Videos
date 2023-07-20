@@ -25,7 +25,7 @@ class Intro3(Scene):
             ).scale(1.3).shift(LEFT*4.3)
         stack.shift(UP*0.2)
         title = SVGMobject("../images/HyperGI_2.svg")
-        title.next_to(stack, RIGHT, buff=0.5).shift(DOWN*0.2)
+        title.next_to(stack, RIGHT, buff=0.5).shift(DOWN*0.3)
         self.play(Write(stack))
         self.play(FadeIn(title))
         # group objects
@@ -35,7 +35,7 @@ class Intro3(Scene):
             "Generative Intelligence Video Series",
             font = "Open Sans",
             color=BLACK,
-            ).scale(0.7)
+            ).scale(0.77)
         sub_title.next_to(title_group, DOWN, buff=0.5)
         self.play(
             FadeIn(sub_title)
@@ -43,7 +43,7 @@ class Intro3(Scene):
         self.play(FadeOut(sub_title), run_time=1.9)
         # move title and stack to the topleft corner
         self.play(
-            title_group.animate.shift(UP*3+LEFT*5.3).scale(0.3),
+            title_group.animate.shift(UP*3.2+RIGHT*5.6).scale(0.17),
         )
 
 
