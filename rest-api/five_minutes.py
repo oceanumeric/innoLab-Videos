@@ -340,7 +340,7 @@ class Ch1(MovingCameraScene):
         
         rest_exp = _abb_text("REST", "stands for REpresentational State Transfer", 6.2, 1)
 
-        self.play(rest_exp.animate.shift(UP*1).scale(0.7))
+        self.play(rest_exp.animate.shift(UP*1).scale(0.7), run_time=1.5)
 
         # clear the screen
         self.play(
