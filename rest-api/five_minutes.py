@@ -6,9 +6,12 @@ from pathlib import Path
 
 
 theme_color = "#37CB8F"
-theme_color_weak = "#83EDBC"
+theme_color_light = "#83EDBC"
 theme_color_gray = "#3b3a3a"
 theme_color_blue = "#2F7ED0"
+theme_color_blue_light = "#7fb3eb"
+theme_color_gray_light = "#616060"
+theme_color_turquoise = "#26e8ff"
 
 
 class BootstrapSVGMobject(SVGMobject):
@@ -93,7 +96,7 @@ class Ch1(MovingCameraScene):
 
         # add bottom right corner shape
         cloudy = BootstrapSVGMobject(
-            "cloudy-fill", color="#d2f7e6"
+            "cloudy-fill", color=theme_color_light,
         ).scale(1.7)
         cloudy.shift(DOWN*3+RIGHT*5.3).rotate(PI/7.7)
         self.play(FadeIn(cloudy))
@@ -138,6 +141,7 @@ class Ch1(MovingCameraScene):
         # move out the rest_text_group
         self.play(FadeOut(rest_text_group))
 
+       
         # add explanation text
         api_abbr = Text(
             "API",
@@ -150,7 +154,7 @@ class Ch1(MovingCameraScene):
         vertical_bar2 = Rectangle(
             height=0.7,
             width=0.11,
-            fill_color= theme_color_weak,
+            fill_color= theme_color_light,
             fill_opacity=1.6,
             stroke_width=0.5,
         )
@@ -175,6 +179,31 @@ class Ch1(MovingCameraScene):
 
         self.play(Write(api_group))
 
+        def _abb_text(text1, text2, shift_x, shift_y):
+
+            abbr = Text(
+                text1,
+                font = "Roboto",
+                color = theme_color,
+                weight = BOLD
+            ).shift(LEFT*shift_x + UP*shift_y)
+
+            t2c_dict = {}
+            for i in text1:
+                t2c_dict[i] = theme_color
+
+            expl = Text(
+                text2,
+                font = "Roboto",
+                t2c = t2c_dict,
+                color = theme_color_gray,
+                weight = BOLD
+            ).next_to(abbr, RIGHT, buff=0.2).shift(DOWN*0.05)
+
+            vertical_bar2.next_to(abbr, LEFT, buff=0.16)
+
+            return VGroup(vertical_bar2, abbr, expl)
+
         # move up the api_group
         self.play(api_group.animate.shift(UP*1.3))
 
@@ -183,12 +212,12 @@ class Ch1(MovingCameraScene):
             "pc-display-horizontal", color=theme_color_blue
         ).scale(0.8).shift(LEFT*4+DOWN*0.2)
 
-        self.play(FadeIn(pc_icon), run_time=0.3)
-
         # sever image
         sever_image = SVGMobject("../assets/server.svg").scale(0.8).shift(RIGHT*4+DOWN*0.2)
 
-        self.play(DrawBorderThenFill(sever_image))
+        pc_sever_group = VGroup(pc_icon, sever_image)
+
+        self.play(Write(pc_sever_group))
 
         # add arrow
         client_to_server = Arrow(
@@ -231,6 +260,254 @@ class Ch1(MovingCameraScene):
         response_group = VGroup(server_to_client, response_text).shift(DOWN*0.15)
 
         self.play(Write(response_group), run_time=1.5)
+
+        # move out the api_group
+        self.play(FadeOut(api_group))
+
+        # move out the request_group and response_group
+        self.play(
+            FadeOut(request_group),
+            FadeOut(response_group),
+        )
+
+        # scale up pc_icon and sever_image
+        self.play(
+            pc_icon.animate.scale(1.1).shift(RIGHT*0.2+UP*0.1),
+            sever_image.animate.scale(1.1).shift(LEFT*0.2+UP*0.1),
+        )
+
+        # cloudy fill
+        cloudy_fill2 = BootstrapSVGMobject(
+            "cloud-fill", color=theme_color_blue_light,
+        ).scale(0.7).shift(DOWN*0.1)
+
+        # play
+        self.play(Create(cloudy_fill2))
+
+        # add text
+        cloud_text = Text(
+            "{...}",
+            font = "Roboto",
+            color=theme_color_gray,
+            weight = BOLD
+        ).scale(0.4).shift(DOWN*0.1)
+        rest_api_text = Text(
+            "REST API",
+            font = "Roboto",
+            color=theme_color_gray
+        ).scale(0.4).next_to(cloud_text, DOWN, buff=0.1)
+
+        # group cloud_text and rest_api_text
+        cloud_group = VGroup(cloud_text, rest_api_text)
+
+        # add arrow
+        cloud_arrow1 = Arrow(
+            start=pc_icon.get_right(),
+            end=cloudy_fill2.get_left(),
+            color=theme_color_gray_light,
+        ).shift(UP*0.2)
+        cloud_arrow1.tip.scale(0.7)
+
+        cloud_arrow2 = Arrow(
+            start=cloudy_fill2.get_left(),
+            end=pc_icon.get_right(),
+            color=theme_color_gray_light,
+        ).shift(DOWN*0.2)
+        cloud_arrow2.tip.scale(0.7)
+
+        cloud_arrow3 = Arrow(
+            start = cloudy_fill2.get_right(),
+            end = sever_image.get_left(),
+            color=theme_color_gray_light,
+        ).shift(UP*0.2)
+        cloud_arrow3.tip.scale(0.7)
+
+        cloud_arrow4 = Arrow(
+            start = sever_image.get_left(),
+            end = cloudy_fill2.get_right(),
+            color=theme_color_gray_light,
+        ).shift(DOWN*0.2)
+        cloud_arrow4.tip.scale(0.7)
+
+        self.play(
+            FadeIn(cloud_group), 
+            cloud_group.animate.shift(UP*0.1),
+            Write(cloud_arrow1),
+            Write(cloud_arrow2),
+            Write(cloud_arrow3),
+            Write(cloud_arrow4)
+            )
+        
+        rest_exp = _abb_text("REST", "stands for REpresentational State Transfer", 6.2, 1)
+
+        self.play(rest_exp.animate.shift(UP*1).scale(0.7))
+
+        # clear the screen
+        self.play(
+            FadeOut(pc_sever_group),
+            FadeOut(cloud_group),
+            FadeOut(cloudy_fill2),
+            FadeOut(cloud_arrow1),
+            FadeOut(cloud_arrow2),
+            FadeOut(cloud_arrow3),
+            FadeOut(cloud_arrow4),
+            FadeOut(rest_exp)
+        )
+
+        # add document
+        document_svg = SVGMobject("../assets/document.svg")
+        document_svg.scale(1.2).shift(UP*0.5)
+
+        # add text
+        not_specification = Text(
+            "Not a specification",
+            font = "Roboto",
+            color=theme_color_gray)
+        not_specification.next_to(document_svg, DOWN, buff=0.2)
+        not_specification.scale(0.7)
+
+        self.play(
+            FadeIn(document_svg),
+            Write(not_specification),
+            run_time=0.7
+        )
+
+        self.play(
+            FadeOut(document_svg),
+            FadeOut(not_specification)
+        )
+
+        # rectangle
+        rest_api_rules = Text(
+            "REST API Rules",
+            font = "Roboto",
+            weight = BOLD
+        ).scale(0.5)
+
+        rectangle_txt1 = RoundedRectangle(
+            corner_radius = 0.2,
+            width = rest_api_rules.width+0.3,
+            height = rest_api_rules.height+0.3)
+        
+        # fill color
+        rectangle_txt1.set_fill(color=theme_color_turquoise, opacity=0.8)
+        
+        rest_api_rules_group = VGroup(rectangle_txt1, rest_api_rules)
+
+        self.play(
+            Write(rest_api_rules_group),
+            rest_api_rules_group.animate.shift(LEFT*3.5+UP*0.7),
+            )
+        
+        def _text_box(text):
+            text = Text(
+                text,
+                font = "Roboto",
+                color=theme_color_blue,
+                weight = BOLD)
+            text_box = RoundedRectangle(
+                corner_radius = 0.2,
+                stroke_color = theme_color_turquoise,
+                width = text.width+0.3,
+                height = text.height+0.3)
+    
+            return VGroup(text, text_box)
+        
+        uniform_interface = _text_box("Uniform Interface").scale(0.5)
+        client_server = _text_box("Client-Server").scale(0.5)
+        state_less = _text_box("Stateless").scale(0.5)
+        cache = _text_box("Cacheable").scale(0.5)
+        layered_system = _text_box("Layered System").scale(0.5)
+        code_on_demand = _text_box("Code on Demand (Optional)").scale(0.5)
+
+        # arrange group
+        uniform_interface.shift(RIGHT*1.7+UP*2.1)
+        client_server.next_to(uniform_interface, DOWN, buff=0.2, aligned_edge=LEFT)
+        state_less.next_to(client_server, DOWN, buff=0.2, aligned_edge=LEFT)
+        cache.next_to(state_less, DOWN, buff=0.2, aligned_edge=LEFT)
+        layered_system.next_to(cache, DOWN, buff=0.2, aligned_edge=LEFT)
+        code_on_demand.next_to(layered_system, DOWN, buff=0.2, aligned_edge=LEFT)
+
+
+        # add curved arrow
+        start_point_coord = rest_api_rules_group.get_right()
+        curved_arrow1 = CurvedArrow(
+            start_point = [start_point_coord[0]-0.4, start_point_coord[1]+0.25, 0],
+            end_point = uniform_interface.get_left(),
+            color = theme_color_turquoise,
+            stroke_width = 2,
+            tip_length = 0.0,
+            radius = -9,
+        )
+
+        grp1 = VGroup(curved_arrow1, uniform_interface)
+
+        curved_arrow2 = CurvedArrow(
+            start_point = [start_point_coord[0]-0.2, start_point_coord[1]+0.25, 0],
+            end_point = client_server.get_left(),
+            color = theme_color_turquoise,
+            stroke_width = 2,
+            tip_length = 0.0,
+            radius = -8,
+        )
+
+        grp2 = VGroup(curved_arrow2, client_server)
+
+        curved_arrow3 = CurvedArrow(
+            start_point = [start_point_coord[0], start_point_coord[1], 0],
+            end_point = state_less.get_left(),
+            color = theme_color_turquoise,
+            stroke_width = 2,
+            tip_length = 0.0,
+            radius = -7,
+        )
+
+        grp3 = VGroup(curved_arrow3, state_less)
+
+        curved_arrow4 = CurvedArrow(
+            start_point = [start_point_coord[0], start_point_coord[1], 0],
+            end_point = cache.get_left(),
+            color = theme_color_turquoise,
+            stroke_width = 2,
+            tip_length = 0.0,
+            radius = 7,
+        )
+
+        grp4 = VGroup(curved_arrow4, cache)
+
+        curved_arrow5 = CurvedArrow(
+            start_point = [start_point_coord[0]-0.2, start_point_coord[1]-0.25, 0],
+            end_point = layered_system.get_left(),
+            color = theme_color_turquoise,
+            stroke_width = 2,
+            tip_length = 0.0,
+            radius = 8,
+        )
+
+        grp5 = VGroup(curved_arrow5, layered_system)
+
+        curved_arrow6 = CurvedArrow(
+            start_point = [start_point_coord[0]-0.4, start_point_coord[1]-0.25, 0],
+            end_point = code_on_demand.get_left(),
+            color = theme_color_turquoise,
+            stroke_width = 2,
+            tip_length = 0.0,
+            radius = 9,
+        )
+
+        grp6 = VGroup(curved_arrow6, code_on_demand)
+
+
+        self.play(Write(grp1), run_time=0.9)
+        self.play(Write(grp2), run_time=0.9)
+        self.play(Write(grp3), run_time=0.9)
+        self.play(Write(grp4), run_time=0.9)
+        self.play(Write(grp5), run_time=0.9)
+        self.play(Write(grp6), run_time=0.9)    
+
+    
+
+
 
 
     
