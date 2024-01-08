@@ -27,7 +27,7 @@ class BootstrapSVGMobject(SVGMobject):
 class Intro3(Scene):
     def construct(self):
         # set background color
-        self.camera.background_color = WHITE
+        self.camera.background_color = "#232236"
         # create moving objects
         stack = BootstrapSVGMobject(
             "stack", color="#37A48D"
