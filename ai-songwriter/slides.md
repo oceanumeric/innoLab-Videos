@@ -17,6 +17,9 @@ math: katex
 - Listen to a song that I wrote
 
 
+<img class="landing-img" src="../images/michael.png">
+
+
 ---
 
 
@@ -26,6 +29,8 @@ math: katex
 
 - Explain how I wrote it
 
+
+<img class="landing-img" src="../images/michael.png">
 
 
 ---
@@ -41,6 +46,8 @@ math: katex
     - do prompt engineering to write a new song with ChatGPT
     - compare the two songs
 
+
+<img class="landing-img" src="../images/michael.png">
 
 ---
 
@@ -59,6 +66,7 @@ math: katex
 
 
 
+
 <img class="landing-img" src="../images/michael.png">
 
 
@@ -66,7 +74,7 @@ math: katex
 
 # Listen to a song that I wrote 
 
-
+<img class="landing-img" src="../images/michael.png">
 
 ---
 
@@ -77,6 +85,8 @@ I got the plan of traveling to another city
 
 As I need to make some extra money
 ```
+
+<img class="landing-img" src="../images/michael.png">
 
 
 ---
@@ -92,6 +102,8 @@ Because they had another strike
 ```
 
 
+<img class="landing-img" src="../images/michael.png">
+
 
 ---
 
@@ -103,6 +115,7 @@ I can not afford to take another ticket
 So I need to borow some money from my credit card
 ```
 
+<img class="landing-img" src="../images/michael.png">
 
 ---
 
@@ -117,12 +130,23 @@ I just want to sail away to a distant shore
 So I could live like a free man
 ```
 
+
+<img class="landing-img" src="../images/michael.png">
+
+
+
 --- 
 
 # Explain how I wrote it
 
 - On Thursday morning, I got the plan of traveling to another city
 - My train was canceled because DB had another strike
+
+
+
+<img class="landing-img" src="../images/michael.png">
+
+
 
 ---
 
@@ -136,6 +160,8 @@ So I could live like a free man
 
 <img style="width:78%" src="https://static01.nyt.com/images/2016/10/14/arts/bob-dylan-playlist-slide-B0QW/bob-dylan-playlist-slide-B0QW-videoSixteenByNineJumbo1600-v2.jpg">
 
+
+<img class="landing-img" src="../images/michael.png">
 
 ---
 
@@ -177,6 +203,7 @@ The sky too is fallin' in over you
 And it's all over now, baby blue
 ```
 
+
 ---
 
 ![bg contain](./images/luck.png)
@@ -202,6 +229,7 @@ The literary definitions of
 >“I consider myself a poet first and a musician second. I live like a poet and I’ll die like a poet.” - Bob Dylan
 
 
+
 ---
 
 ![poor-poet](https://lh3.googleusercontent.com/ci/AE9Axz-vokTVUzZqdFNjcPcfKOpXtfSi8ODKEz4rkouvgCDyAz8Sf5Mao5Mf7ZNNvb3V8OJVVzbNTA=s1200)
@@ -214,6 +242,9 @@ They have a song called 'Apeman'
 
 
 ![bg right:40%](https://s3.amazonaws.com/bit-photos/large/6049141.jpeg)
+
+
+<img class="landing-img" src="../images/michael.png">
 
 <br>
 
@@ -241,6 +272,9 @@ I want to sail away to a distant shore and make like an apeman
     - D
 ```
 
+<br>
+
+<img class="landing-img" src="../images/michael.png">
 
 ---
 
@@ -277,11 +311,16 @@ So I could live like a free man
 - A few-shot learning
 
 
+<img class="landing-img" src="../images/michael.png">
+
 ---
 
 # No prompt engineering
 
 <img style="width:80%" src="./images/no-prompt.png">
+
+
+<img class="landing-img" src="../images/michael.png">
 
 
 ---
@@ -321,6 +360,9 @@ Now generate a song for me with the same style of Bob Dylan.
 # With prompt engineering
 
 <img style="width:80%" src="./images/prompt1.png">
+
+
+<img class="landing-img" src="../images/michael.png">
 
 
 ---
@@ -463,6 +505,8 @@ Political dynamics, shifting all the same.
 - [Few-shot learning](https://chat.openai.com/share/fa33212b-1cb7-4f1a-b465-0ad403783b94)
 
 
+<img class="landing-img" src="../images/michael.png">
+
 ---
 
 # Who won the contest?
@@ -473,12 +517,17 @@ Political dynamics, shifting all the same.
     - especially processing the environment and atmosphere
 
 
+<img class="landing-img" src="../images/michael.png">
+
 ---
 
 # Want to listen my song again?
 
 
 <iframe width="700" height="430" src="https://www.youtube.com/embed/bUElfgVmXjs?si=d2AXbDaKaBJwOO0B&amp;start=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<img class="landing-img" src="../images/michael.png">
 
 ---
 
