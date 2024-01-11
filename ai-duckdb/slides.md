@@ -6,7 +6,7 @@ math: katex
 ---
 
 
-# 180 Secons to AI and DuckDB 
+# 180 Seconds+ to Build a Mini ChatGPT with DuckDB
 # Why you should care?
 
 Fei Wang (Michael) :heart: AI
@@ -40,6 +40,28 @@ Github: [oceanumeric](https://github.com/oceanumeric)
 # It's all about DATA :boom:
 
 # GPT3 - around 45TB of text data
+
+
+---
+
+# It's all about DATA :boom:
+
+```
+www.amazon.com/robots.txt
+```
+
+```
+# New line added !!! 
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+```
+
+---
+
+# What does 45TB of data mean?
 
 
 ---
@@ -343,7 +365,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 
 ## Way more than enough for my mini ChatGPT
 
--- with my hardware
+- with my hardware
 
 - with my money
 
@@ -442,6 +464,7 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 
 
 
+
 ---
 
 # References
@@ -457,13 +480,26 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 - [DuckDB](https://duckdb.org/)
 
 
+
 ---
 
 # Happy Coding :rocket:
 
 ![bg right:50%](./images/chinese-programmer.png)
 
+<img class="landing-img" src="../images/michael.png">
+
 
 ---
 
-![bg](./images/im12.png)
+<img style="width:80%" src="./images/im12.png">
+
+<img class="landing-img" src="../images/michael.png">
+
+---
+
+# See you next time :butterfly:
+
+![bg right:53%](https://static.vecteezy.com/system/resources/thumbnails/008/873/599/original/subscribe-and-reminder-button-animation-on-black-channel-animated-background-click-internet-media-online-social-stream-streaming-views-youtube-free-video.jpg)
+
+<img class="landing-img" src="../images/michael.png">
