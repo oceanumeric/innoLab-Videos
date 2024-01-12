@@ -20,12 +20,12 @@ class Intro3(Scene):
         # set background color
         self.camera.background_color = WHITE
         # create moving objects
-        stack = BootstrapSVGMobject(
-            "stack", color="#37A48D"
-            ).scale(1.3).shift(LEFT*4.3)
-        stack.shift(UP*0.2)
+        stack = (
+            BootstrapSVGMobject("stack", color="#37A48D").scale(1.3).shift(LEFT * 4.3)
+        )
+        stack.shift(UP * 0.2)
         title = SVGMobject("../images/HyperGI_2.svg")
-        title.next_to(stack, RIGHT, buff=0.5).shift(DOWN*0.3)
+        title.next_to(stack, RIGHT, buff=0.5).shift(DOWN * 0.3)
         self.play(Write(stack))
         self.play(FadeIn(title))
         # group objects
@@ -33,18 +33,13 @@ class Intro3(Scene):
         # add subtitle
         sub_title = Text(
             "Generative Intelligence Video Series",
-            font = "Open Sans",
+            font="Open Sans",
             color=BLACK,
-            ).scale(0.77)
+        ).scale(0.77)
         sub_title.next_to(title_group, DOWN, buff=0.5)
-        self.play(
-            FadeIn(sub_title)
-        )
+        self.play(FadeIn(sub_title))
         self.play(FadeOut(sub_title), run_time=1.9)
         # move title and stack to the topleft corner
         self.play(
-            title_group.animate.shift(UP*3.2+RIGHT*5.6).scale(0.17),
+            title_group.animate.shift(UP * 3.2 + RIGHT * 5.6).scale(0.17),
         )
-
-
-        

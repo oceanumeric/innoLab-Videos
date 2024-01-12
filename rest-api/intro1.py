@@ -20,8 +20,10 @@ class Intro(Scene):
         # set background color
         self.camera.background_color = WHITE
         # create moving objects
-        em = BootstrapSVGMobject("stack", color="#37A48D").scale(1.3).shift(LEFT*3.7)
-        em.shift(UP*0.1)
-        title = Text("HyperGI", font = "Open Sans", color="#37A48D").scale(3).shift(RIGHT*2)
+        em = BootstrapSVGMobject("stack", color="#37A48D").scale(1.3).shift(LEFT * 3.7)
+        em.shift(UP * 0.1)
+        title = (
+            Text("HyperGI", font="Open Sans", color="#37A48D").scale(3).shift(RIGHT * 2)
+        )
         self.play(Write(em))
         self.play(FadeIn(title))
