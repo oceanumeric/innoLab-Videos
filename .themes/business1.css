@@ -1,192 +1,104 @@
-/* @theme rose-moon */
-/*
-Rosé Pine theme create by RAINBOWFLESH
-> www.rosepinetheme.com
-MIT License https://github.com/rainbowflesh/Rose-Pine-For-Marp/blob/master/license
-
-palette in :root
-*/
+/* @theme business1 */
+/* Author: rnd195 https://github.com/rnd195/ */
+/* MIT license https://github.com/rnd195/my-marp-themes/blob/live/LICENSE */
 
 @import "default";
 @import "schema";
 @import "structure";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 :root {
-    --base: #232136;
-    --surface: #2a273f;
-    --overlay: #393552;
-    --muted: #6e6a86;
-    --subtle: #d0cedb;
-    --text: #e0def4;
-    --love: #eb6f92;
-    --gold: #f6c177;
-    --rose: #ea9a97;
-    --pine: #3e8fb0;
-    --foam: #9ccfd8;
-    --iris: #c4a7e7;
-    --highlight-low: #2a283e;
-    --highlight-muted: #44415a;
-    --highlight-high: #56526e;
-    --variable: #42BA97;
+  font-family: "Work Sans Regular", Arial;
+  --main-color: #040014;
+  --text-color: #121114;
+  --bg-color-alt: #dadada;
+  --mark-background: #98d6ff;
 
-    font-family: ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
-        "Noto Color Emoji";
-    font-weight: initial;
+  background-color: #F2EEF5;
+}
 
-    background-color: var(--base);
-}
-/* Common style */
-h1 {
-    /* Fallback: Set a background color. */
-    background-color: var(--rose);
+/* section {
+  background-color: #e3e3f1;
+  background-size: 30px 30px;
+  background-image: linear-gradient(#3f32af18 3px, transparent 3px), linear-gradient(to right, #ccc89536 3px, #d8d8e62d 3px);
+} */
 
-    /* Create the gradient. */
-    background-image: linear-gradient(45deg, #d64f76, #d9ce86);
-
-    /* Set the background size and repeat properties. */
-    background-size: 100%;
-    background-repeat: repeat;
-
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-
-    padding-bottom: 2mm;
-    margin-bottom: 12mm;
-}
-h2 {
-color: var(--rose);
-}
-h3 {
-color: var(--rose);
-}
-h4 {
-color: var(--rose);
-}
-h5 {
-color: var(--rose);
-}
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-color: var(--rose);
-}
-a {
-color: var(--iris);
-/* add underline */
-text-decoration: underline;
-}
-p {
-    font-size: 20pt;
-    font-weight: 600;
-    color: var(--text);
-}
-code {
-    color: var(--text);
-    background-color: var(--highlight-muted);
-}
-text {
-color: var(--text);
-}
-ul {
-color: var(--subtle);
-}
-li {
-color: var(--subtle);
-}
-img {
-background-color: var(--base);
-}
-strong {
-    color: var(--text);
-    font-weight: inherit;
-    font-weight: 800;
-}
-mjx-container {
-    color: var(--text);
-}
-marp-pre {
-    background-color: var(--overlay);
-    border-color: var(--highlight-high);
+  color: var(--text-color);
 }
 
-.hljs {
-    color: #abb2bf;
-    background: #282c34;
-  }
-  
-  .hljs-comment,
-  .hljs-quote {
-    color: #5c6370;
-    font-style: italic;
-  }
-  
-  .hljs-doctag,
-  .hljs-keyword,
-  .hljs-formula {
-    color: #c678dd;
-  }
-  
-  .hljs-section,
-  .hljs-name,
-  .hljs-selector-tag,
-  .hljs-deletion,
-  .hljs-subst {
-    color: #e06c75;
-  }
-  
-  .hljs-literal {
-    color: #56b6c2;
-  }
-  
-  .hljs-string,
-  .hljs-regexp,
-  .hljs-addition,
-  .hljs-attribute,
-  .hljs-meta .hljs-string {
-    color: #98c379;
-  }
-  
-  .hljs-attr,
-  .hljs-variable,
-  .hljs-template-variable,
-  .hljs-type,
-  .hljs-selector-class,
-  .hljs-selector-attr,
-  .hljs-selector-pseudo,
-  .hljs-number {
-    color: #d19a66;
-  }
-  
-  .hljs-symbol,
-  .hljs-bullet,
-  .hljs-link,
-  .hljs-meta,
-  .hljs-selector-id,
-  .hljs-title {
-    color: #61aeee;
-  }
-  
-  .hljs-built_in,
-  .hljs-title.class_,
-  .hljs-class .hljs-title {
-    color: #e6c07b;
-  }
-  
-  .hljs-emphasis {
-    font-style: italic;
-  }
-  
-  .hljs-strong {
-    font-weight: bold;
-  }
-  
-  .hljs-link {
-    text-decoration: underline;
-  }
+header {
+  font-size: 0.7em;
+  color: var(--text-color);
+  border-bottom: 1px solid #040014;
+}
+
+footer {
+  font-size: 0.7em;
+  color: var(--text-color);
+  border-top: 1px solid #040014;
+}
+
+code {
+  background-color: #ffffff;
+  font-size: 0.9em
+}
+
+pre {
+  background-color: #ffffff;
+}
+
+/* https://github.com/yhatt/marp/issues/263 */
+section::after {
+  font-size: 0.75em;
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+  color: var(--text-color);
+}
+
+/* the "center" keyword centers the image - may break, careful */
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+  background-color: #F2EEF5;
+}
+
+blockquote {
+  background: #ffffff;
+  border-left: 10px solid var(--main-color);
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+mark {
+  background-color: var(--mark-background);
+  padding: 0 2px 2px;
+}
+
+table {
+  display: block;
+  margin: 0 auto;
+}
+
+th {
+  background-color: #8ea2af;
+  color: white;
+}
+
+/* || SECTION CLASS: tinytext */
+/* new class that makes p, ul, and blockquote text smaller */
+/* might be useful for the References slide, use <!-- _class: tinytext --> */
+section.tinytext>p,
+section.tinytext>ul,
+section.tinytext>blockquote {
+  font-size: 0.65em;
+}
+
 
 section {
     background-image: 
@@ -202,39 +114,22 @@ section {
 }
 
 
-
-
-div.colwrap {
-    background-color: inherit;
-    color: inherit;
-    width: 100%;
-    height: 100%;
+section.math {
+    background-size: 30px 30px !important;
+    background-image: linear-gradient(#3f32af18 3px, transparent 3px), linear-gradient(to right, #ccc89536 3px, #d8d8e62d 3px) !important;
+    background-repeat: repeat !important;
 }
 
-div.colwrap div:first-child, div.colwrap div:first-child {
-    margin-top: 30px !important;
-}
-div.colwrap div.left, div.colwrap div.right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    padding: 70px 35px 70px 70px;
-}
-div.colwrap div.left {
-    right: 50%;
-    left: 0;
-}
-div.colwrap div.right {
-    left: 50%;
-    right: 0;
-}
+
 
 .landing-img {
     position: absolute;
+    background-color: #F2EEF5;
     bottom: 10px;
     right: 50px;
     width: 17%;
 }
+
 
 .banner-img {
     display: block;
