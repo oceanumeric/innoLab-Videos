@@ -592,3 +592,90 @@ clients at HyperGI.
 ---
 
 # Lab Session
+
+
+---
+
+# Prompt Engineering
+
+> What is prompt engineering?
+
+[ChatGPT Answer](https://chat.openai.com/share/d2a0f20c-f23a-4ed0-be3a-e393184b8b8a)
+
+> Too long to uninstrucive
+
+```
+# my answer
+
+It is not command engineering. It is prompt engineering.
+```
+
+
+---
+
+# Command V.S. Prompt
+
+> Command: `Do this!` or `Give me the best results!`
+
+> Prompt: `I have this..., they are organized in this way..., now arrange them based on the number of relevant keywords that fit my needs`
+
+
+---
+
+# Introudcing HyperGI's Prompt Engineering Framework
+
+- Classify all you tasks into the following categroies:
+
+   1. `write` (or `generate`)
+   2. `extract` (or `retrieve`)
+   3. `rank` (or `sort`)
+
+  
+---
+
+# Introudcing HyperGI's Prompt Engineering Framework
+
+<img style="width:60%" src="https://pythoncoursesite.files.wordpress.com/2017/01/input_output.gif">
+
+
+---
+
+# Introudcing HyperGI's Prompt Engineering Framework
+
+> Let's say we have a simple input `I booked a flight from New York to London`
+
+- `write` (or `generate`): _I booked a flight from New York to London_ `I am planning to stay in London for 3 days.`
+- `extract` (or `retrieve`): _I booked a flight from New York to London_ `places: New York, London`
+- `rank` (or `sort`): _I booked a flight from New York to London_ `A flight was booked from New York to London`
+
+
+---
+
+# Introudcing HyperGI's Prompt Engineering Framework
+
+- Write and Extract are easy to understand
+  - most effective way is to give examples (good examples)
+  - brainstorming together with ChatGPT is a good way to get good examples
+
+- Rank is a little bit tricky
+  - You need to understand the data well
+  - You need to know how to design a good prompt
+
+
+---
+
+# People always want the best results
+
+> But, what is the best? (rank or sort)
+
+<br>
+
+<img style="width:50%" src="https://afteracademy.com/images/comparison-of-sorting-algorithms-banner1-b8ab06536245c4da.png">
+
+
+
+---
+
+# But 'best' could be subjective or objective
+
+> Never ask a ChatGPT to do subjective tasks
