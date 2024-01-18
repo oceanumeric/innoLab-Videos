@@ -9,6 +9,13 @@ math: katex
 # The ChatGPT Advantage: Leveraging Free Agents for Success
 
 
+Fei Wang (Michael) :heart: AI and many other things
+
+HyperGI
+
+Github: [oceanumeric](https://github.com/oceanumeric)
+
+
 
 <img class="landing-img" src="../images/michael.png">
 
@@ -751,13 +758,10 @@ It is not command engineering. It is prompt engineering.
 - [christian.huening@hypergi.com]() : US
 
 
-<br>
+> Contact us if you want to know more about HyperGI's Prompt Engineering Framework. We also develop and deploy customized ChatGPTs and multi-agent systems for our clients.
 
-> Contact us if you want to know more about HyperGI's Prompt Engineering Framework
 
-<br>
-
-> We also develop and deploy customized ChatGPTs and multi-agent systems for our clients
+<img class="landing-img" src="../images/michael.png">
 
 
 ---
@@ -800,3 +804,27 @@ It is not command engineering. It is prompt engineering.
 - `multiple alternatives` $\rightarrow$ `many choices`
 - `choosing the most suitable or optimal solution` $\rightarrow$ `best choice`
 - `a set of criteria, goals, or values` $\rightarrow$ `metric`
+
+
+
+---
+
+# Programs =  Data Structures + Algorithms
+
+- Structure your data well
+- Design a good prompt
+
+![bg right:40%](https://upload.wikimedia.org/wikipedia/en/9/90/Algorithms_%2B_Data_Structures.jpg)
+
+
+
+---
+
+<br>
+
+# See you next time 
+
+
+![bg right:53%](https://static.vecteezy.com/system/resources/thumbnails/008/873/599/original/subscribe-and-reminder-button-animation-on-black-channel-animated-background-click-internet-media-online-social-stream-streaming-views-youtube-free-video.jpg)
+
+<img class="landing-img" src="../images/michael.png">
