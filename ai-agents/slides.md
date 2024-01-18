@@ -100,6 +100,10 @@ math: katex
 
 ---
 
+<iframe width="960" height="500" src="https://www.youtube.com/embed/lLTT8ogRf50?si=rZOqpcwcLej34kwx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
 ![bg fit](./images/caiguoqiang.png)
 
 
@@ -144,11 +148,24 @@ Small Temple in a Fishing Village
     - in terms of quality
         - for images - resolution, etc.
         - for text - grammar, etc
+
+
+
+---
+
+# ~50TB of data means what?
+
+- High quality of data collected from the Internet
+    - with very good labels
+    - in terms of quality
+        - for images - resolution, etc.
+        - for text - grammar, etc
 - Structured data collected from the Internet
     - knowledge graph
     - things are mapped to each other
         - images to text
         - problems to solutions
+            
             
 
 ---
@@ -399,6 +416,7 @@ clients at HyperGI.
 > Takeaway: json format works very well with ChatGPTs
 
 
+
 ---
 
 # See How LinkedIn Uses My Data
@@ -467,6 +485,13 @@ clients at HyperGI.
 
 ---
 
+# Like her 
+
+<img width="90%" src="./images/public-figure.png">
+
+
+---
+
 # Let's summarize what we have learned so far
 
 - GPTs are trained with a lot of data
@@ -487,3 +512,73 @@ clients at HyperGI.
 # You learned a lot today
 
 ## One more Lab Session
+
+
+---
+
+# Rank Search Results
+
+- A relative hard task for ChatGPT
+
+- You will learn a framework to do prompt engineering _in a scientific way_
+
+- You will also learn how to design a `data strategy` for your ChatGPTs
+
+
+---
+
+# Rank Search Results
+
+## Problem setting
+
+> I notice a company called `watershed`, a software platform to help businesses to reduce their carbon footprint comprehensively. I want to know more about it.
+
+
+---
+
+![bg contain](https://watershed.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeasure.ec4d22be.png&w=3840&q=75)
+
+
+---
+
+# I want to find how they did it
+
+## Of course, I googled it
+
+- Selected `30` results from Google
+- Each of them is a `json` object
+
+
+
+---
+
+```js
+{
+"date": ["2024-01-16"],
+  "query": ["how watershed help firms to reduce carbon emissions"],
+  "results": [
+        {
+        "result_idx": 1,
+        "title": "Watershed — The enterprise climate platform",
+        "link": "https://watershed.com/",
+        "snippet": "Watershed is the enterprise climate platform.
+        Measure your carbon footprint, report your results,
+        and take action to reduce your emissions — starting now."
+        },
+        // ... many more results upto 30
+    ]
+}
+```
+
+---
+
+# I want ChatGPT to help me to select the best results that fit my needs
+
+> 🧐 how could ChatGPT know what I want?
+
+> Prompt Engineering 🦾
+
+
+---
+
+# Lab Session
