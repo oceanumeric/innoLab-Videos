@@ -693,6 +693,7 @@ It is not command engineering. It is prompt engineering.
 - Write and Extract are easy to understand
   - most effective way is to give examples (good examples)
   - brainstorming together with ChatGPT is a good way to get good examples
+  - `function calling` is a good way to structure the data
 
 - Rank is a little bit tricky
   - You need to understand the data well
@@ -711,14 +712,6 @@ It is not command engineering. It is prompt engineering.
 
 
 
----
-
-# But 'best' could be subjective or objective
-
-> Never ask a ChatGPT to do subjective tasks
-
-> For the best as objective, design the metric first
-
 
 ---
 
@@ -736,6 +729,14 @@ It is not command engineering. It is prompt engineering.
 
 ---
 
+# But 'best' could be objective
+
+
+> For the best as objective, design the metric first
+
+
+---
+
 # Best as objective
 
 <img style="width:93%" src="https://www.azquotes.com/picture-quotes/quote-you-can-t-manage-what-you-don-t-measure-peter-drucker-86-73-61.jpg">
@@ -745,6 +746,18 @@ It is not command engineering. It is prompt engineering.
 ---
 
 # Lab Session (Rank Search Results with A Metric)
+
+- [fei.wany@hypergi.com]() : Europe
+- [christian.huening@hypergi.com]() : US
+
+
+<br>
+
+> Contact us if you want to know more about HyperGI's Prompt Engineering Framework
+
+<br>
+
+> We also develop and deploy customized ChatGPTs and multi-agent systems for our clients
 
 
 ---

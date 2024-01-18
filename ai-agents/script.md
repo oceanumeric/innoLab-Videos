@@ -321,3 +321,139 @@ By the way, to balance the gender ratio, I have to put more points in my slides.
 ## slide 52
 
 Okay, you have learned a lot today. Now, let's do another experiment with ChatGPT. This time we will build an agent that could help us to rank the search results. Here you will learn a framework to do prompt engineering in a scientific way.
+
+
+## slide 53
+
+This kind of task is relative hard for ChatGPT. But with this example, you will learn a framework to do prompt engineering in a scientific way. you will also learn how to design a data strategy for your chatgpts. 
+
+
+## slide 54, 55
+
+Here is the problem settings. 
+
+I notice a company called `watershed`, a software platform to help businesses to reduce their carbon footprint comprehensively. I want to know more about it.
+
+
+## slide 56, 57
+
+To understand this firm better, especially how this firm help firms to reduce carbon emissinos. I googled it and found many results. 
+
+
+## slide 58
+
+Now, I want to know which one is the best. but how could chatgpt know what I want?
+
+We need prompt engineering.
+
+
+## slide 60, 
+
+what is prompt engineering? you can ask ChatGPT. But to put it in the simple way, it is not command engineering. It is not like you tell ChatGPT what to do. It is more like you tell ChatGPT how to do it.
+
+
+## slide 61
+
+
+Here are some comparison between command engineering and prompt engineering.
+
+
+> Command: `Do this!` or `Give me the best results!`
+
+> Prompt: `I have this..., they are organized in this way..., now arrange them based on the number of relevant keywords that fit my needs`
+
+we should avoid command chatgpt to do something. We should tell chatgpt how to do it.
+
+
+## slide 62
+
+Now, let me introduce you the framework for prompt engineering that we used at HyperGI. We first classify the task into different categories:
+
+- write (or generate) something
+- extract (or retrieve) something
+- rank (or sort) something
+
+
+## slide 63
+
+Keep the big picture in mind. any computer receives some input and process it and generate some output.
+
+
+## slide 64
+
+
+> Let's say we have a simple input `I booked a flight from New York to London`
+
+- `write` (or `generate`): _I booked a flight from New York to London_ `I am planning to stay in London for 3 days.`
+- `extract` (or `retrieve`): _I booked a flight from New York to London_ `places: New York, London`
+- `rank` (or `sort`): _I booked a flight from New York to London_ `A flight was booked from New York to London`
+
+
+## slide 65
+
+- Write and Extract are easy to understand
+  - most effective way is to give examples (good examples)
+  - brainstorming together with ChatGPT is a good way to get good examples
+  - `function calling` is a good way to structure the data
+
+- Rank is a little bit tricky
+  - You need to understand the data well
+  - You need to know how to design a good prompt
+
+
+## slide 66
+
+You know in the life, people always want the best, but what is the best? It is relative. It is relative to your needs.
+
+
+## slide 67
+
+It could be very subjective too like  this
+
+
+## slide 68
+
+or this
+
+
+## slide 69
+
+
+> For the best as objective ones, design the metric first
+
+
+## slide 70
+
+I like this quotation, you cannot manage what you cannot measure.
+
+
+## slide 71
+
+We are supposed to have a lab session here. But I think I will skip it as I have already explained the framework.
+
+Contact us if you want to learn more about it. and we also develop and delopy customized chatgpts and mutli-agent systems for our clients.
+
+
+## slide 72
+
+To summarize, knowing the data well is very important
+
+
+## slide 73
+
+Maybe learning a little bit about algorithm is also important. I put one of my favourite from MIT on the screen. You can have a look at it.
+
+## slide 74
+
+If you have no time to learn, just use the following framework. It is very easy to use.
+Here I asked ChatGPT 'what is decision making?'
+
+
+Decision making is the process of selecting a course of action from among `multiple alternatives` to achieve a desired outcome or solve a problem. It involves evaluating various options, considering their potential consequences, and `choosing the most suitable or optimal solution` based on `a set of criteria, goals, or values`. Decision making is a fundamental aspect of human cognition and is applicable in various contexts, including personal, professional, and organizational settings.
+
+
+## slide 75
+
+- `multiple alternatives` $\rightarrow$ `many choices`
+- `choosing the most suitable or optimal solution` $\rightarrow$ `best choice`
+- `a set of criteria, goals, or values` $\rightarrow$ `metric`
