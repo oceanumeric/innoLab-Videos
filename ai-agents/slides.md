@@ -260,7 +260,7 @@ clients at HyperGI.
 
 --- 
 
-# Lab session
+# Lab session (without function calling)
 
 
 ---
@@ -339,7 +339,10 @@ clients at HyperGI.
 
 ---
 
+# Lab Session: Function Calling
 
+
+---
 
 ```js
 {
@@ -505,6 +508,13 @@ clients at HyperGI.
 - json format works very well with ChatGPTs
 
 - schema.org is a good place to find the structure of the data
+
+
+---
+
+# Hey, Greta Thunberg, if you are watching this video
+
+<img style="width:50%" src="./images/male-models.png">
 
 
 --- 
