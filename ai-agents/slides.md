@@ -48,7 +48,7 @@ math: katex
 
 - Try 'Data Extraction Specialist' with ChatGPT
     - Here you will learn what ChatGPTs are really good at
-    - You will also learn a secret weapon to make ChatGPTs be more powerful
+    - You will also learn a secret weapon that makes ChatGPTs be more powerful
         - **function calling** ❤️
 
 - Try 'Rank Search Results' with ChatGPT
@@ -100,7 +100,7 @@ math: katex
 
 ---
 
-<iframe width="960" height="500" src="https://www.youtube.com/embed/lLTT8ogRf50?si=rZOqpcwcLej34kwx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="960" height="500" src="https://www.youtube.com/embed/lLTT8ogRf50?si=ncvxb-GdDxje84Vy&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
@@ -121,6 +121,11 @@ Small Temple in a Fishing Village
 
 ---
 
+![bg fit](./images/dalle-instruction.png)
+
+
+---
+
 ![bg fit](./images/dalle1.png)
 
 
@@ -134,6 +139,7 @@ Small Temple in a Fishing Village
 ![bg fit](./images/dalle3.png)
 
 
+
 ---
 
 ![bg fit](./images/combined.png)
@@ -144,7 +150,7 @@ Small Temple in a Fishing Village
 # ~50TB of data means what?
 
 - High quality of data collected from the Internet
-    - with very good labels
+    - with very `good labels`
     - in terms of quality
         - for images - resolution, etc.
         - for text - grammar, etc
@@ -157,9 +163,7 @@ Small Temple in a Fishing Village
 
 - High quality of data collected from the Internet
     - with very good labels
-    - in terms of quality
-        - for images - resolution, etc.
-        - for text - grammar, etc
+
 - Structured data collected from the Internet
     - knowledge graph
     - things are mapped to each other
@@ -183,7 +187,7 @@ Small Temple in a Fishing Village
     - how to make the data structured
     - how to make the data high quality
 
-- this will also help us to know how to use the GPTs
+
 
 
 
@@ -226,11 +230,11 @@ help the client to refine the goal too.
 
 <br>
 
-> RULE NO.1: Avoide using ChatGPT to answer general questions (or big questions)
+> RULE NO.1: Avoid using ChatGPT to answer general questions (or big questions)
 
 <br>
 
-- You can consult with it but don't rely on it
+- `You can consult with it but don't rely on it`
 
 
 ---
@@ -274,7 +278,7 @@ clients at HyperGI.
 
 # Function calling
 
-- It is a way to make ChatGPTs be more powerful
+- It is a feature to make ChatGPTs be more powerful
     - Very handy for doing data extraction
     - It structures the data very well
     - You need to know `json` format a little bit
@@ -369,11 +373,44 @@ clients at HyperGI.
 
 ---
 
-# Why does ChatGPTs love json format?
+
+[OpenAI Cookbook](https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models)
+
+```python
+functions = [
+  {
+    "name": "extract_address",  # ....
+  }
+]
+prompt = """You are a Data Extraction Specialist..."""
+def my_function(input_data):
+  completion = client.chat.completions.create(
+          model="gpt-4",
+          messages=[
+              {"role": "system", "content": prompt},
+              {
+                  "role": "user",
+                  "content": f"your data input {input_data}",
+              },
+          ],
+          functions=functions,  # this is how you use it
+          function_call='auto'
+      )
+  return completion.choices[0].message.model_dump_json()  # result
+```
+
+---
+
+# Why does ChatGPT love json format?
 
 ## Another secret I will share with you now :)
 
 ![bg right:40%](https://upload.wikimedia.org/wikipedia/en/3/34/Fantastic_Beasts-_The_Secrets_of_Dumbledore.png)
+
+
+---
+
+![bg fit](https://miro.medium.com/v2/resize:fit:1400/0*2iFIzmhNNBa-AMe-.png)
 
 
 ---
@@ -385,7 +422,7 @@ clients at HyperGI.
 
 ---
 
-# Lab Session
+# Lab Session (what kind of data LinkedIn collects from you)
 
 
 
@@ -679,3 +716,74 @@ It is not command engineering. It is prompt engineering.
 # But 'best' could be subjective or objective
 
 > Never ask a ChatGPT to do subjective tasks
+
+> For the best as objective, design the metric first
+
+
+---
+
+# Best as subjective
+
+![bg right:40%](https://www.refinery29.com/images/11525994.jpg)
+
+
+---
+
+# Best as subjective
+
+![bg right:40%](https://s.yimg.com/ny/api/res/1.2/y9OOymNr4JEAr4g.aiETAg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTk2MA--/https://media.zenfs.com/en/fashionista_850/b91b7f6670984781f803ad9d10363a7f)
+
+
+---
+
+# Best as objective
+
+<img style="width:93%" src="https://www.azquotes.com/picture-quotes/quote-you-can-t-manage-what-you-don-t-measure-peter-drucker-86-73-61.jpg">
+
+
+
+---
+
+# Lab Session (Rank Search Results with A Metric)
+
+
+---
+
+# Knowing the data well is important
+
+- You need to know what kind of data you have
+
+- Know how to label or describe the data
+
+- Then you can organize the data in a way that ChatGPTs can understand
+
+
+---
+
+# Maybe learning a little bit about 'sorting algorithms' is helpful
+
+- Give you a sense of how to design a good prompt
+
+- Give you the language that you can instruct ChatGPTs to do the sorting
+
+- [Design and Analysis of Algorithms](https://www.youtube.com/playlist?list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp) from MIT
+
+
+---
+
+# If no time to learn, just use the following principle
+
+```
+# What is decision making?
+```
+
+> Decision making is the process of selecting a course of action from among `multiple alternatives` to achieve a desired outcome or solve a problem. It involves evaluating various options, considering their potential consequences, and `choosing the most suitable or optimal solution` based on `a set of criteria, goals, or values`. Decision making is a fundamental aspect of human cognition and is applicable in various contexts, including personal, professional, and organizational settings.
+
+
+---
+
+# Decision Making as a Sorting Problem
+
+- `multiple alternatives` $\rightarrow$ `many choices`
+- `choosing the most suitable or optimal solution` $\rightarrow$ `best choice`
+- `a set of criteria, goals, or values` $\rightarrow$ `metric`
