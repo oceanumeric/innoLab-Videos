@@ -1,0 +1,11 @@
+id,name,family_name,age,salary,is_married,category,na_col1,na_col2
+1,a,hh,20,1000,TRUE,top,1,hello
+2,b,ii,30,2000,FALSE,top,2,world
+3,c,jj,40,3000,TRUE,top,3,
+4,d,kk,50,4000,FALSE,middle,,
+5,e,ll,60,5000,TRUE,middle,,r
+6,f,mm,70,6000,FALSE,middle,,python
+7,g,nn,80,7000,TRUE,bottom,,
+8,h,oo,90,8000,FALSE,bottom,,
+9,i,pp,100,9000,TRUE,bottom,,
+10,j,qq,110,10000,FALSE,bottom,,

@@ -3,6 +3,7 @@ from PIL import Image
 import numpy as np
 import urllib.request
 from pathlib import Path
+import pandas as pd
 
 
 class BootstrapSVGMobject(SVGMobject):
@@ -165,3 +166,112 @@ class Intro(Scene):
         image2.scale(0.7)
         # add to the screen
         self.play(GrowFromCenter(image2))
+
+        # add text 'SEE IT IN MATRICES' on the top of the screen
+        text_image3 = Tex("SEE IT IN MATRICES")
+        # set color '#DF5868' for text_image3
+        text_image3.set_color("#DF5868")
+        # scale it up to 1.2
+        text_image3.scale(1.5)
+        # play text_image3 animation
+        self.play(FadeIn(text_image3))
+
+    
+
+
+# new chapter ch1
+class Ch1(Scene):
+    def construct(self):
+        # set background color
+        self.camera.background_color = "#0f0e17"
+
+        # add hypergi logo on the top right
+        stack = (
+            BootstrapSVGMobject("stack", color="#37A48D").scale(1.2).shift(LEFT * 4.3)
+        )
+        stack.shift(UP * 0.2)
+        title = SVGMobject("../images/HyperGI_2.svg")
+        title.next_to(stack, RIGHT, buff=0.5).shift(DOWN * 0.3)
+        # group objects
+        title_group = VGroup(stack, title)
+        title_group.shift(UP * 3.2 + RIGHT * 6.1).scale(0.17)
+        # add to the screen
+        self.add(title_group)
+
+        # add text 'Chapter 1' on the top of the screen
+        text_ch1 = Tex("Chapter 1 - data.table basics")
+        # set color '#7f5af0' for text_ch1
+        text_ch1.set_color("#7f5af0")
+        # scale it up to 1.2
+        text_ch1.scale(1.5)
+        # play text_ch1 animation
+        self.play(FadeIn(text_ch1))
+
+        # add text ad code '[i, j, by]' under text_ch1
+        text_ch1_code = Tex("[i, j, by]")
+        # scale it up to 1.2
+        text_ch1_code.scale(1.5)
+        # make text_ch1_code be below text_ch1
+        text_ch1_code.next_to(text_ch1, DOWN * 2)
+        # add underline for text_ch1_code
+        underline = Underline(text_ch1_code, buff=0.3, color="#7f5af0")
+        # play text_ch1_code animation
+        self.play(FadeIn(text_ch1_code), Create(underline))
+
+        # remove everything
+        self.play(FadeOut(text_ch1), FadeOut(text_ch1_code), FadeOut(underline))
+
+        # add data.table logo on the top of the screen
+        data_table_logo = ImageMobject("./images/data-table-logo.png")
+        data_table_logo.shift(UP * 3.2 + LEFT * 6.3).scale(0.4)
+        # add to the screen
+        self.add(data_table_logo)
+
+        # read data from './data/demo_dt.csv'
+        df = pd.read_csv("./data/demo_dt.csv")
+        # add table from df
+        row1 = df.columns[:5].to_list()
+        row2 = df.iloc[0, :5].to_list()
+        # convert row2 to string
+        row2 = [str(i) for i in row2]
+
+        row3 = df.iloc[1, :5].to_list()
+        # convert row3 to string
+        row3 = [str(i) for i in row3]
+
+        row4 = df.iloc[2, :5].to_list()
+        # convert row4 to string
+        row4 = [str(i) for i in row4]
+
+        # add table from df
+        table = Table([row1, row2, row3, row4])
+        # scale down table to 0.7
+        table.scale(0.7)
+        # move table to center of the screen
+        table.move_to(ORIGIN)
+        # play table animation
+        self.play(GrowFromCenter(table))
+
+        # add brace for table
+        # add on top of table
+        brace_table = Brace(table, UP)
+        # add on left of table
+        brace_table2 = Brace(table, LEFT)
+
+        # play brace_table and brace_table2 animations
+        self.play(GrowFromCenter(brace_table), GrowFromCenter(brace_table2))
+
+        # group table, brace_table, and brace_table2 together
+        table_group = VGroup(table, brace_table, brace_table2)
+
+        # create animation for table_group by scaling it down to 0.7
+        table_group.generate_target()
+        table_group.target.scale(0.8)
+        # move table_group to right of the screen
+        table_group.target.move_to(RIGHT * 0.5)
+        # play table_group animation
+        self.play(MoveToTarget(table_group))
+
+        # add text 'data.table' on the top of the screen
+ 
+    
