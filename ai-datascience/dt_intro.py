@@ -35,53 +35,18 @@ class Intro(Scene):
         # set background color
         self.camera.background_color = "#0f0e17"
 
-        # add 'programming = data structures + algorithms' text
-        # text = Tex("programming = data structures + algorithms")
-        # # add 'this is also true for data science' text
-        # text2 = Tex("This is also ture for", " data science")
-        # # set color '#DF5868' for text2
-        # text2[1].set_color("#DF5868")
-        # # scale it up to 1.2
-        # text.scale(1.2)
-        # # make text2 be below text
-        # text2.next_to(text, DOWN * 2)
-        # self.play(Write(text))
-        # self.wait(1)
-        # # text2 animation
-        # text2_anims = [FadeIn(text2[0]), FadeIn(text2[1], shift=DOWN)]
-        # self.play(*text2_anims)
-
-        # # move it to the top of the screen
-        # text.generate_target()
-        # text.target.move_to(3 * UP)
-        # # move text2 to the top of the screen
-        # text2.generate_target()
-        # text2.target.move_to(2 * UP)
-        # self.play(MoveToTarget(text), MoveToTarget(text2))
-
-        # # introduce three data structures
-        # # table, json, and unstructured data like text-file
-        # table = BootstrapSVGMobject("table", color="#2cb67d")
-        # table.scale(0.7)
-        # table.move_to(3 * LEFT)
-        # json = BootstrapSVGMobject("filetype-json", color="#2cb67d")
-        # json.scale(0.7)
-        # text_file = BootstrapSVGMobject("body-text", color="#2cb67d")
-        # text_file.scale(0.7)
-        # text_file.move_to(3 * RIGHT)
-        # # add table, json, and text to the screen one by one
-        # self.play(GrowFromPoint(table, table.get_center()))
-        # self.play(GrowFromPoint(json, json.get_center()))
-        # self.play(GrowFromPoint(text_file, text_file.get_center()))
-
-        # # clear everything
-        # self.play(
-        #     FadeOut(text),
-        #     FadeOut(text2),
-        #     FadeOut(table),
-        #     FadeOut(json),
-        #     FadeOut(text_file),
-        # )
+        # add hypergi logo on the top right
+        stack = (
+            BootstrapSVGMobject("stack", color="#37A48D").scale(1.2).shift(LEFT * 4.3)
+        )
+        stack.shift(UP * 0.2)
+        title = SVGMobject("../images/HyperGI_2.svg")
+        title.next_to(stack, RIGHT, buff=0.5).shift(DOWN * 0.3)
+        # group objects
+        title_group = VGroup(stack, title)
+        title_group.shift(UP * 3.2 + RIGHT * 6.1).scale(0.17)
+        # add to the screen
+        self.add(title_group)
 
         # add a human svg
         human = BootstrapSVGMobject("person-fill", color="#F2EEF5").scale(0.7)
@@ -216,14 +181,155 @@ class Intro(Scene):
 
             emoji.shift([x, y, 0])
             linkedin_related_emojis_group.append(emoji)
-            
 
+        line_group = []
         # animate new emojis
         for emoji in linkedin_related_emojis_group:
             self.play(FadeIn(emoji))
             # add line from human to feature
             line = Line(features_group[-1].get_center(), emoji.get_center(), buff=0.7)
             self.play(Create(line), run_time=0.3)
+            # append line to line_group
+            line_group.append(line)
+
+        
+        # group human_group and linkedin_related_emojis_group together
+        human_group = Group(human_group, *linkedin_related_emojis_group, *line_group)
+
+        # fadeout human_group
+        self.play(FadeOut(human_group))
+
+        # add text 'relational database' on the top-left of the screen
+        text = Tex("Relational Database")
+        text.shift(UP * 3 + LEFT * 4.5)
+        # play text animation
+        self.play(FadeIn(text))
+
+        # add human_table again on the right of the screen
+        human_table.scale(0.9).shift(LEFT* 4.5 + DOWN * 1.7)
+        # play human_table animation
+        self.play(GrowFromCenter(human_table))
+
+        # create a new table 'linkedin_table'
+        linkedin_table = Table(
+            [
+                ["linkedinUsername", "universirty", "jobTitle", "phonNumber", "id"],
+                ["@john", "Harvard", "Data Scientist", "123456789", "1"],
+                ["@jane", "Stanford", "Data Analyst", "123456789", "3"],
+                ["...", "...", "...", "...", "..."],
+                ["@jane", "Stanford", "Data Analyst", "123456789", "42"],
+            ]
+        ).scale(0.3).shift(RIGHT * 2 + UP * 1.5)
+
+        # play linkedin_table animation
+        self.play(GrowFromCenter(linkedin_table))
+
+        # add color to id cell for linkedin == 'yes'
+        human_table.add_highlighted_cell((3, 7), color=GREEN)
+        human_table.add_highlighted_cell((5, 7), color=GREEN)
+
+        # set opacity
+        human_table[0].set_opacity(0)
+        human_table[1].set_opacity(0)
+
+        # animate linkedin_table
+        self.play(
+            human_table[0].animate.set_opacity(0.7),
+            human_table[1].animate.set_opacity(0.7),
+            run_time=2,
+        )
+
+        # add curved line that linked one cell from human_table to linkedin_table
+        line = CurvedArrow(
+            human_table.get_cell((3, 7)).get_center(),
+            linkedin_table.get_cell((2, 5)).get_center(),
+            angle=-PI / 2,
+            color=GREEN,
+        )
+        # play line animation
+        self.play(Create(line))
+
+
+        # remove everything
+        self.play(FadeOut(text), FadeOut(human_table), FadeOut(linkedin_table), FadeOut(line))
+
+        # add text 'Nested Json' on the top-left of the screen
+        text = Tex("Nested Json")
+        text.shift(UP * 3 + LEFT * 4.5)
+        # play text animation
+        self.play(FadeIn(text))
+
+        # add human_group again
+        human_group.scale(0.7).shift(LEFT * 2.5)
+        # play human_group animation
+        self.play(GrowFromCenter(human_group))
+
+        # add code block
+        code_snippet = """
+        // json file
+        {
+            "id": 1,
+            "type": "person",
+            "gender": "female",
+            ...
+            "linkedin": "yes"
+            "linkedinProfile": {
+                "username": "@john",
+                "university": "Harvard",
+                "jobTitle": "Data Scientist",
+                "phoneNumber": "123456789"
+            }
+        }
+        """
+
+        code_block = Code(
+            code=code_snippet,
+            background="window",
+            language="python",
+            font="Monospace",
+            line_spacing=1,
+        ).scale(0.75)
+
+        # move code_block to the right of human_group
+        code_block.next_to(human_group, RIGHT * 2)
+        # play code_block animation
+        self.play(FadeIn(code_block))
+
+
+        # remove everything
+        self.play(FadeOut(text), FadeOut(human_group), FadeOut(code_block))
+
+
+        # add text 'Unstructured Data' on the top-left of the screen
+        text = Tex("Unstructured Data")
+        text.shift(UP * 3 + LEFT * 4.5)
+
+        # add text 'Will be covered in the future' in the middle of the screen
+        text2 = Tex("Will be covered in the future")
+        self.play(FadeIn(text))
+        self.play(FadeIn(text2))
+
+        # remove everything
+        self.play(FadeOut(text), FadeOut(text2))
+
+
+        # add human_group again
+        self.play(GrowFromCenter(human_group))
+
+        # add list:
+        # - 'Json processing'
+        # - 'Table-like data'
+        # - 'Json and table mixed'
+
+        blist = BulletedList(
+            "Json processing",
+            "Table-like data",
+            "Json and table mixed",
+        )
+        # move to right of human_group
+        blist.next_to(human_group, RIGHT * 3)
+        # play blist animation
+        self.play(FadeIn(blist))
 
 
         
