@@ -88,7 +88,6 @@ class Intro(Scene):
 
         tech1 = "#ff5470"
         tech2 = "#7f5af0"
-    
 
         squares = _make_grid_art(n_x=13, n_y=8, grout_size=0.5, h_num=0, color=tech1)
 
@@ -127,10 +126,7 @@ class Intro(Scene):
         stack.shift(UP * 0.2)
         title = SVGMobject("../images/HyperGI_2.svg")
         title.next_to(stack, RIGHT, buff=0.5).shift(DOWN * 0.3)
-        self.play(
-            FadeOut(*squares3, run_time=1.5),
-            FadeIn(stack, title)
-         )
+        self.play(FadeOut(*squares3, run_time=1.5), FadeIn(stack, title))
         # group objects
         title_group = VGroup(stack, title)
 
