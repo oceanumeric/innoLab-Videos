@@ -199,7 +199,7 @@ class Intro(Scene):
         self.play(human_group.animate.shift(LEFT * 3))
 
         # add new emojis
-        linkedin_related_emojis = ['1F3EB', 'E249', '260E', 'E063']
+        linkedin_related_emojis = ['E303', 'E259', '260E', 'E063']
         postion_degree = [20, 60, 340, 300]
         postion_degree = [i * PI / 180 for i in postion_degree]
 
@@ -219,7 +219,11 @@ class Intro(Scene):
             
 
         # animate new emojis
-        self.play(*[FadeIn(emoji) for emoji in linkedin_related_emojis_group])
+        for emoji in linkedin_related_emojis_group:
+            self.play(FadeIn(emoji))
+            # add line from human to feature
+            line = Line(features_group[-1].get_center(), emoji.get_center(), buff=0.7)
+            self.play(Create(line), run_time=0.3)
 
 
         
