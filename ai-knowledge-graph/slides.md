@@ -24,11 +24,35 @@ Github: [oceanumeric](https://github.com/oceanumeric)
 
 ---
 
+# Roadmap
+
+- 26 January: Encountered a problem
+
+---
 
 # Roadmap
 
-- A framework for navigating in the information and AI age
-    - Three fundamental questions
+- 29 January
+
+![tina-conservation](./images/tina-conversation.png)
+
+---
+
+# Roadmap
+
+- 30 January: had a blur idea about it (...)
+
+![starting-point](./images/starting_point.png)
+
+
+
+---
+
+# Roadmap
+
+- 09 February: had a talk with Christian (explained and further developed the idea)
+
+
 
 
 
@@ -311,14 +335,28 @@ more context, I can't provide details about its content or purpose.
 
 ---
 
+# Bill Gates and Sam Altman
 
 <iframe width="960" height="500" src="https://www.youtube.com/embed/8-Ymdc6EdKw?si=14eQukFU90KTAiM5&amp;start=35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ---
 
+# Greg Brockman Today
+
 <iframe width="960" height="500" src="https://www.youtube.com/embed/Rp3A5q9L_bg?si=jisfi0Vxj-52Yzad&amp;start=1992" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+
+---
+
+# Greg Brockman (6 years ago)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UdIPveR__jw?si=GV2M_S1yxoI5McSx&amp;start=1992" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+
+![bg right:100%](https://miro.medium.com/v2/resize:fit:1030/1*tb9TT-mwFn1WPzkkbjoMCQ.png)
 
 ---
 
@@ -333,3 +371,227 @@ more context, I can't provide details about its content or purpose.
 | shortcoming | limited memory and processing power | limited understanding of the context |
 | advantage | creativity and flexibility | scalability and efficiency |
 
+---
+
+# Prince III: In the information and AI age, graph or neural network is the key to understand the context
+
+
+---
+
+# Strategy III: To measure or construct the context is to measure or construct the graph or neural network (nodes, edges, and weights)
+
+---
+
+# Recap
+
+- Principle I: The value of information is context-wise
+- Strategy I: To sell information is to construct (or sell) context
+- Principle II: Context is linked information (Entitites + Relations)
+- Strategy II: To measure the context is to measure the number of relevant entities and degree of relevance (relations)
+- Prince III: In the information and AI age, graph or neural network is the key to understand the context
+- Strategy III: To measure or construct the context is to measure or construct the graph or neural network (nodes, edges, and weights)
+
+
+
+---
+
+# Concrete examples
+
+
+![tina-conservation](./images/tina-conversation.png)
+
+- Problem: how could I measure the degree of relevance for any entity and relation?
+
+    - `www.thalia.de` (saved in the database by ChatGPT)
+    - `www.jaeger-birkenau.de` (not saved in the database by ChatGPT)
+
+
+---
+
+# How to solve the problem? First attempt
+
+- [Builtwith](https://trends.builtwith.com/websitelist/Shopify/Germany)
+- [Similarweb](https://www.similarweb.com/de/website/thalia.de/)
+- [Similarweb-lP](https://lp.similarweb.com/)
+
+<br>
+
+> Too Expensive
+> Why they could charge such a high price?
+
+
+---
+
+
+
+
+---
+
+
+# How to solve the problem?
+
+## Use our principles and strategies
+
+<br>
+
+> I need to construct the context (graph or neural network) for each entity and relation
+
+
+---
+
+# Which company stores the largest number of entities and relations?
+
+- Google (search engine, knowledge graph, and youtube)
+- Meta (Facebook, Instagram, and WhatsApp)
+- Amazon (e-commerce)
+- Microsoft (Bing, LinkedIn, and GitHub)
+- OpenAI (ChatGPT, Codex, and DALL-E)
+- ...
+
+
+---
+
+# Google Data Center
+
+<iframe width="960" height="500" src="https://www.youtube.com/embed/XZmGGAbHqa0?si=USW1rmiRHAcLSGrW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+---
+
+![bg contain](./images/google-data-center.png)
+
+
+---
+
+# How to construct the context with Google?
+
+```
+> Generate a list of schemes for the furniture industry
+{'schemes': ['Product/Service Types',
+             'Business Types',
+             'Attributes or Qualities',
+             'Functionality or Purpose',
+             'Geographical Factors',
+             'Culture Factors',
+             'Customer Experience',
+             'Market Presence or Influence',
+             'Technological Aspects',
+             'Regulatory or Compliance Factors',
+             'Material Composition',
+             'Top Brands or Companies',
+             'Cost or Pricing',
+             'Maintenance and Service',
+             'Design Styles',
+             'Customization Options',
+             'Sustainability Features',
+             'Assembly Requirements',
+             'Warranty and Support',
+             'Supply Chain Transparency']}
+```
+
+---
+
+# How to construct the context with Google?
+
+```
+> Industry is: furniture; scheme: [Attributes or Qualities]
+'vocabularies': ['Durability',
+                  'Comfort',
+                  'Design',
+                  'Functionality',
+                  'Quality',
+                  'Materials',
+                  'Style',
+                  ....
+                  'Craftsmanship',
+                  'Elegance',
+                  'Finish',
+                  'Aesthetics',
+                  'Innovation',
+                  'Customization',
+                  'Eco-Friendly',
+                  'Versatility',
+                  'Affordability',
+                  'Luxury'
+]
+```
+
+---
+
+# Many interesting things happened 🍄🚀🧐💸📌
+
+
+---
+
+# Many interesting things happened 🍄🚀🧐💸📌
+
+- 81,892 results searched in 2-3 hours
+- cost: 46.78 Euro
+- Google Price: 5 Euro (or dollars) per 1000 searches
+
+|user_search_taxonomy     | average_search_results|
+|:------------------------|----------------------:|
+|Top Brand                |              217333563|
+|Customer Experience      |              173123299|
+|Attributes or Qualities  |              112473769|
+|Functionality or Purpose |              109781259|
+|Product/Service Types    |               86085654|
+
+
+--- 
+
+|user_search_taxonomy         |search_query                             | average_search_results|
+|:----------------------------|:----------------------------------------|----------------------:|
+|Functionality or Purpose     |Design + site:instagram.com + Möbel      |              239000000|
+|Market Presence or Influence |Möbeldesign + site:instagram.com + Möbel |              232000000|
+|Functionality or Purpose     |Entwurf + site:instagram.com + Möbel     |              231000000|
+|Attributes or Qualities      |Ästhetik + site:instagram.com + Möbel    |              213000000|
+|Business Types               |Möbeldesign + site:instagram.com + Möbel |              209000000|
+|Attributes or Qualities      |Design + site:instagram.com + Möbel      |              192000000|
+|Attributes or Qualities      |Stil + site:instagram.com + Möbel        |              178000000|
+|Culture Factors              |Ästhetik + site:instagram.com + Möbel    |              173000000|
+|Attributes or Qualities      |Komfort + site:instagram.com + Möbel     |              163000000|
+|Functionality or Purpose     |Komfort + site:instagram.com + Möbel     |              163000000|
+
+
+---
+
+# Many interesting things happened 🍄🚀🧐💸📌
+
+|domain                        |   N|
+|:-----------------------------|---:|
+|https://www.amazon.de/        | 297|
+|https://www.otto.de/          | 256|
+|https://www.linkedin.com/     | 242|
+|https://www.instagram.com/    | 238|
+|https://www.ikea.com/         | 218|
+|https://www.facebook.com/     | 205|
+|https://www.moebel-martin.de/ | 178|
+|https://www.pinterest.com/    | 177|
+|https://www.inhofer.de/       | 172|
+|https://moebel-boss.de/       | 158|
+
+
+---
+
+# Many interesting things happened 🍄🚀🧐💸📌
+
+|domain                          |  N|
+|:-------------------------------|--:|
+|https://www.knutzen.de/         | 16|
+|https://moebelmay.de/           | 11|
+|https://www.ggmmoebel.com/      | 19|
+|https://www.haefele.de/         | 11|
+|https://vanguardfurniture.com/  | 12|
+|https://www.jaeger-birkenau.de/ | 17|
+|https://www.moebel-grieger.de/  | 12|
+|https://www.service-check.com/  | 15|
+|https://www.degruyter.com/      | 16|
+|https://www.hiller-moebel.de/   | 12|
+
+
+---
+
+# Many interesting things happened 🍄🚀🧐💸📌
+
+- More than 14K Instagram accounts were found
