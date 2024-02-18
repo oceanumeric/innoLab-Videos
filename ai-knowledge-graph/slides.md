@@ -77,7 +77,7 @@ Github: [oceanumeric](https://github.com/oceanumeric)
 
 --- 
 
-# Principle I: The value of information is context-wise
+# Principle I: The value of information is context wise
 
 
 ---
@@ -230,12 +230,35 @@ more context, I can't provide details about its content or purpose.
     - Context in the airline industry: very valuable
         - very relevant to the business
     - Context in the homeoffice worker: not valuable
-        - not relevant to the business
+        - not relevant
+
 
 
 ---
 
-# Strategy II: To measure the context is to measure the degree of relevance
+# How to measure the context?
+  
+- Context in the airline industry: very valuable
+
+> Context is rich; ✈️⛑👨‍👩‍👦💸...
+
+- Context in the homeoffice worker: not valuable
+
+> Context is not that rich; 🏡👨‍💻🪑
+
+
+---
+
+
+![bg contain](./images/war-and-peace.png)
+
+
+
+
+
+---
+
+# Strategy II: To measure the context is to measure the number of relevant entities and degree of relevance (relations)
 
 
 [ChatGPT's Answer](https://chat.openai.com/share/a3f1b0b1-48f9-4ba4-a5c6-6ac22eb84a50)
@@ -244,28 +267,69 @@ more context, I can't provide details about its content or purpose.
 
 ---
 
-# How could we measure the degree of relevance?
+# Recap
 
-
-|Method | Algorithm (inluding AI) can do | Human can do |
-|:---|:---:|:---:|
-|Contextual Analysis | :heavy_check_mark: | :heavy_check_mark: |
-|Comparsion | :heavy_check_mark: | :heavy_check_mark: |
-|Scoring System | :heavy_check_mark: | :heavy_check_mark: |
-|Expert Opinion| :x: (it depends) | :heavy_check_mark: |
-
-<br>
-
-> BUT, the above table does not give us a clear answer to the question: How to measure the degree of relevance?
+- Principle I: The value of information is context-wise
+- Strategy I: To sell information is to construct (or sell) context
+- Principle II: Context is linked information (Entitites + Relations)
+- Strategy II: To measure the context is to measure the number of relevant entities and degree of relevance (relations)
 
 
 ---
 
-# How could we measure the degree of relevance?
+![bg contain](./images/summary1.png)
 
 
-| Search Engine + AI | Human |
-|:---|:---|
-| need to work out the algorithm | need to talk with experts |
-| need to collect data | need to think and understand |
-| need to put it into a context | need IQ and EQ |
+---
+
+# How does ChatGPT (LLM) understand the context?
+
+- Entities (easy, just store the information in the database)
+- Relations (hard, need to learn from the data)
+
+
+
+---
+
+# How to measure the degree of relevance?
+
+- we can assign a score (or weight) to each relation
+    - the higher the score, the more relevant the relation is
+    - the lower the score, the less relevant the relation is
+
+
+---
+
+![bg contain](./images/degree-of-relevance-1.png)
+
+
+
+---
+
+![bg contain](./images/word-embeddings2.png)
+
+
+---
+
+
+<iframe width="960" height="500" src="https://www.youtube.com/embed/8-Ymdc6EdKw?si=14eQukFU90KTAiM5&amp;start=35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+---
+
+<iframe width="960" height="500" src="https://www.youtube.com/embed/Rp3A5q9L_bg?si=jisfi0Vxj-52Yzad&amp;start=1992" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+---
+
+# Human vs AI (complementary to each other)
+
+
+| | Human | AI |
+|---|---|---|
+|context | we understand the context | AI understands the context _partially_ |
+| memory | strore information in the brain | store information in the database |
+| reasoning | intuition and logic | algorithms |
+| shortcoming | limited memory and processing power | limited understanding of the context |
+| advantage | creativity and flexibility | scalability and efficiency |
+
