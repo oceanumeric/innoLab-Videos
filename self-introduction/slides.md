@@ -5,7 +5,7 @@ paginate: true
 math: katex
 footer: '**Fei (Michael) Wang**
          **Machine Learning Engineer**
-         **Aabout me**'
+         **Life Journey**'
 ---
 
 <!-- _class: title -->
@@ -42,10 +42,10 @@ footer: '**Fei (Michael) Wang**
 
 ---
 
-- ## It takes me around 5 months to have a team
-- ## The team is not working cohesively
-- ## We made some small money but not enough to support the team financially
-- ## very hard to get funding from investors or government
+* ## It takes me around 5 months to have a team
+* ## The team is not working cohesively
+* ## We made some small money but not enough to support the team financially
+* ## very hard to get funding from investors or government
 
 
 ---
@@ -59,24 +59,42 @@ footer: '**Fei (Michael) Wang**
 
 ![bg contain](./images/patent-ev.jpeg)
 
+
+---
+
+![bg contain](./images/ev-patent2.png)
+
 ---
 
 # But reality should be harsh
 
 Common questions I encountered:
 
-> XXX firms are doing the same thing, why do you think you can do better?
+* > XXX firms are doing the same thing, why do you think you can do better?
 
-> You are not the first one who has this idea, why do you think you can succeed?
+* > You are not the first one who has this idea, why do you think you can succeed?
 
-> Who will pay for your product or service?
+* > Who will pay for your product or service?
 
 
 ---
 
-# Those questions are indeed legitimate!
+# Those questions are indeed legitimate! 
 
-- ## I will explain why those questions are legitimate
-- ## I will use two real life examples to illustrate
-    - ### Things I wish I knew before I started my startup
-    - ### Things I wish I will stick to if I start another startup
+* ## Why the reality should be and is harsh?
+* ## I will explain why those questions are legitimate
+* ## I will use two real life examples to illustrate
+    * ### Things I wish I knew before I started my startup
+    * ### Things I will stick to no matter what I do in the future
+
+
+---
+
+# Example 1: "Sell first, think later" - Daniel Stroh 
+
+![daniel](./images/daniel.png)
+
+
+---
+
+# Let's watch an animation to understand the concept
