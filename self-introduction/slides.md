@@ -98,3 +98,30 @@ Common questions I encountered:
 ---
 
 # Let's watch an animation to understand the concept
+
+
+
+
+
+---
+
+# Example 2: "Always offer huge value when you looking for attention" - Hugo Duprez 
+
+![hugo](./images/hugo.png)
+
+
+---
+
+# Hugo's story
+
+* ## Pixelicious - founded and acquired
+    * image processing for the game industry
+* ## TextureLab - founded and acquired
+    * AI-powered 3D texture generation
+
+
+--- 
+
+# Let's visit Hugo's website to learn what he has learned
+
+- https://www.hugoduprez.com/about
