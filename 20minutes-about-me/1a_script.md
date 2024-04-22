@@ -33,3 +33,16 @@ I used openai's api, fastapi and svelte to build this app.
 
 
 Why this project is only 50% success? First of all, I got some attention from the market. For instance, a guy called mingxi contacted me on LinkedIn and asked me to schedule a meeting. Later I learned he is the CEO of TigerGraph. Since I also shared my product on the youtube channel, some people also contacted me there and asked me how I built the app.
+
+
+I think when we start our own business, we always wish or expect that our business will be successful. But the reality is that most of the businesses will fail. But gaining experience from those failures is the most important thing.
+
+
+Also, during developing those applications, I improved my skills in many technologies. 
+
+I also learned that technology itself is not enough. If you did not do enough research on the market, your project could become a debt. 
+
+
+The another thing I want to emphasize is that never lie in the business world and never exaggerate your achievements. If you do, you will lose your credibility. Overall, it is a very small world. People will know you.
+
+For those who do lie or exaggerate, they are wasting people's time and social resources. They are also wasting their own time.
