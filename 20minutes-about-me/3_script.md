@@ -1,6 +1,6 @@
 Hello everyone,
 
-This is the second video of the series '20 minutes about me'. In this video, I will share my experiences about data science and deep learning.
+This is the third video also the last video of the series '20 minutes about me'. In this video, I will share my experiences about data science and deep learning.
 
 As I have explained that I am doing this is to let potential collaborators, investors, and recruiters know more about me. I believe it is important to know a person's value, expertise, and vision before deciding to work together.
 
